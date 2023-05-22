@@ -1,0 +1,47 @@
+ACENDER LUZ DE LED ATRAVÉS DO SOM DE PALMAS COM O USO DE ARDUÍNO
+
+# Automação Residencial   
+ 
+  O objetivo deste artigo será abordar amplamente os aspectos inerentes à criação de dispositivo que visará acionar, através do som de
+palmas, luzes de led que podem vir a ser utilizadas na ambientação de residências, locais comerciais, dentre outros.
+ 
+## Funcionamento e Uso
+
+O programa Arduino que acende uma luz LED com palmas vai envolver a utilização de um sensor de som, que será conectado à placa Arduino. O
+sensor de som vai detectar o som das palmas e enviar um sinal para a placa Arduino, que, por sua vez, vai acionar o LED para ligar ou desligar.
+O programa vai começar por definir as constantes e as variáveis necessárias. Por exemplo, a porta transmitida onde o sensor de som estará conectado
+será definida como uma constante. Em seguida, o programa vai definir o modo de operação do pino que controla a luz LED como saída.
+Dentro do loop principal do programa, o Arduino vai ler o valor do sensor de som, que é um valor analógico. Se o valor lido ultrapassar um
+determinado limite, significa que um som foi detectado e, portanto, uma luz LED está acesa. Caso contrário, a luz permanece acomodada.
+Para evitar que o programa acione a luz LED várias vezes com um único som, é possível usar uma variável de tempo para definir um intervalo
+mínimo entre os acionamentos. Isso ajuda a garantir que o LED só será acionado novamente depois que um novo som for detectado.
+O código do programa pode ser personalizado para ajustar o limite de detecção do sensor de algum e o tempo de intervalo mínimo entre os
+acionamentos da luz LED, para que possa ser adaptado para diferentes situações e necessidades.
+
+
+## Software Desenvolvido e Documentação de Código
+
+O software desenvolvido consiste em uma integração entre a placa de Arduino UNO e o modulo sensor de som, utilizando a plataforma de desenvolvimento Arduino IDE.
+O código fonte se encontra na raiz deste repositório . 
+
+## Hardware Utilizado
+
+Os componentes de hardware utilizados neste projeto são os seguintes:
+- Plataforma de desenvolvimento: Arduino Uno Rev3 R3 Atmega328 Smd
+- Módulo Detector Sensor De Som Palmas Arduino Pic
+- Cabo Wire Jumper 20cm 20 Fios Macho-macho Protoboard Arduino
+- Led Diodo 5mm Difuso
+- Resistor 120 Ohm 5% 1/4w 0,25w 120r Arduino Pic
+- Protoboard Breadboard 400 Pontos Furos Pinos
+
+
+## Interfaces, Protocolos e Módulos de Comunicação
+
+O projeto utiliza os seguintes protocolos de comunicação e módulos:
+
+- **Serial**: Utilizado para a comunicação entre o Arduino e o computador, permitindo a depuração do código e a exibição de mensagens no monitor serial.
+
+- **WiFi**: Utilizado para conectar o Arduino a uma rede sem fio, possibilitando a comunicação com a internet e serviços remotos.
+
+- **MQTT (Message Queuing Telemetry Transport)**: Utilizado para a comunicação entre o Arduino e o serviço ThingSpeak. O protocolo MQTT é empregado para enviar os dados de temperatura e umidade para o ThingSpeak, onde são armazenados e podem ser analisados. A biblioteca "ThingSpeak.h" é utilizada para implementar a comunicação MQTT no projeto.
+
